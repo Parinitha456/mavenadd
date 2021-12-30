@@ -39,6 +39,8 @@ pipeline {
                      archive 'target/*.jar'
                   }
             }
+      }
+}
           
         }
  }
