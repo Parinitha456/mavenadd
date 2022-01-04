@@ -2,7 +2,7 @@ package com.devhandson;
 
 public class AddNumbers {
 	
-	int a=50;
+	int a=70;
 	//method to add 2 numbers
 		public int addNumbers(int numberOne,int numberTwo) {
 			return numberOne+numberTwo;
