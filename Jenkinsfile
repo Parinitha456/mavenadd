@@ -16,9 +16,7 @@ pipeline {
                                  bat "mvn package"
                                }
                                }
-                        )
-                  }
-              }
+                       
                        
             stage("Consolidate Results") {
                   steps {
