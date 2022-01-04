@@ -1,17 +1,20 @@
 pipeline {
       agent any
       stages {
-              stage("Parallel Execution") {
-                  steps {
-                        parallel(
-                              a:{
-                                 bat "mvn clean"
-                              },
-                               b:{
-                                 bat "mvn test"
-                              },
-                               c:{
+              stage("Cleaning Stage") {
+                    steps {
+                             bat "mvn clean"
+                              }
+              }
+                              stage("Testing stage") {
+                                    steps {
+                                          bat "mvn test"
+                              }
+                              }
+                               stage("Packaging stage") {
+                                     steps {
                                  bat "mvn package"
+                               }
                                }
                         )
                   }
